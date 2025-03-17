@@ -1,0 +1,33 @@
+.image-container {
+    position: relative;
+    /* max-width:  300px; */
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .img-primary,
+  .img-secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .img-secondary {
+    opacity: 0; /* Ban đầu ẩn ảnh thứ 2 bằng cách dùng opacity */
+    transition: opacity 0.3s ease; /* Tạo hiệu ứng chuyển đổi mượt mà */
+  }
+  
+  .image-container:hover .img-primary {
+    opacity: 1; /* Ẩn ảnh đầu tiên khi hover */
+  }
+  
+  .image-container:hover .img-secondary {
+    opacity: 1; /* Hiện ảnh thứ 2 khi hover */
+  }
+  #product-details {
+   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+ }
